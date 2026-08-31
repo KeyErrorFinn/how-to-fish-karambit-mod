@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="GameReferences.props" Condition="Exists('GameReferences.props')" />
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KeyErrorFinn.Karambit</RootNamespace>
+    <AssemblyName>KeyErrorFinn.Karambit</AssemblyName>
+    <Product>How to Karambit</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <LangVersion>latest</LangVersion>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <DeployToProfile>false</DeployToProfile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(BepInExDir)\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExDir)\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="FishNet.Runtime"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\FishNet.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(HowToFishGameDir)\How to Fish_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="src\**\*.cs" />
+    <Content Include="assets\**\*.*"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <ModDeployDirectory>$(BepInExDir)\plugins\KeyErrorFinn-Karambit</ModDeployDirectory>
+  </PropertyGroup>
+
+  <Target Name="CopyToThunderstoreProfile" AfterTargets="Build" Condition="'$(DeployToProfile)' == 'true' and Exists('$(BepInExDir)')">
+    <MakeDir Directories="$(ModDeployDirectory)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModDeployDirectory)" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ModDeployDirectory)" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+    <Copy SourceFiles="@(Content)" DestinationFolder="$(ModDeployDirectory)\assets\" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BepInExDir)\scripts\" Condition="Exists('$(BepInExDir)\scripts\KeyErrorFinn.Karambit.dll')" />
+    <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(BepInExDir)\scripts\" Condition="Exists('$(BepInExDir)\scripts\KeyErrorFinn.Karambit.dll') and Exists('$(TargetDir)$(TargetName).pdb')" />
+  </Target>
+</Project>

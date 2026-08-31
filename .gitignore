@@ -1,0 +1,10 @@
+bin/
+obj/
+.dotnet-cli/
+.nuget-packages/
+.vs/
+GameReferences.props
+dev/assembly-types.txt
+dev/firstpass-types.txt
+dev/AssemblyExplorer/bin/
+dev/AssemblyExplorer/obj/

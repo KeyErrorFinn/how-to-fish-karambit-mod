@@ -1,0 +1,7 @@
+<Project>
+  <!-- Copy this file to GameReferences.props and set the two local paths. -->
+  <PropertyGroup>
+    <HowToFishGameDir>C:\Path\To\How to Fish\How to Fish</HowToFishGameDir>
+    <BepInExDir>C:\Path\To\ThunderstoreProfile\BepInEx</BepInExDir>
+  </PropertyGroup>
+</Project>

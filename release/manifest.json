@@ -1,0 +1,9 @@
+{
+  "name": "How_to_Karambit",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Replaces the held knife with a configurable karambit featuring knife-skin support, two poses, original materials, and an instant vanilla-knife toggle.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}
