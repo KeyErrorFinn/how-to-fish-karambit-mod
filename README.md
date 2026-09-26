@@ -1,6 +1,9 @@
 # How to Karambit
 
-[![Last commit](https://img.shields.io/github/last-commit/KeyErrorFinn/how-to-fish-karambit-mod)](https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/commits/main) [![Issues](https://img.shields.io/github/issues/KeyErrorFinn/how-to-fish-karambit-mod)](https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/issues)
+<p align="center">
+  <a href="https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/commits/main"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/KeyErrorFinn/how-to-fish-karambit-mod" /></a>
+  <a href="https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/KeyErrorFinn/how-to-fish-karambit-mod" /></a>
+</p>
 
 <p align="center">
   <img alt="C Sharp" src="https://img.shields.io/badge/C%20Sharp-512BD4?logo=csharp&logoColor=fff" />
