@@ -2,6 +2,14 @@
 
 [![Last commit](https://img.shields.io/github/last-commit/KeyErrorFinn/how-to-fish-karambit-mod)](https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/commits/main) [![Issues](https://img.shields.io/github/issues/KeyErrorFinn/how-to-fish-karambit-mod)](https://github.com/KeyErrorFinn/how-to-fish-karambit-mod/issues)
 
+<p align="center">
+  <img alt="C Sharp" src="https://img.shields.io/badge/C%20Sharp-512BD4?logo=csharp&logoColor=fff" />
+  <img alt=".NET Framework 4.7.2" src="https://img.shields.io/badge/.NET%20Framework%204.7.2-512BD4?logo=dotnet&logoColor=fff" />
+  <img alt="Unity" src="https://img.shields.io/badge/Unity-000000?logo=unity&logoColor=fff" />
+  <img alt="BepInEx" src="https://img.shields.io/badge/BepInEx-F59E0B?logoColor=000" />
+  <img alt="Thunderstore" src="https://img.shields.io/badge/Thunderstore-242424?logo=thunderstore&logoColor=fff" />
+</p>
+
 How to Karambit is a client-side cosmetic BepInEx mod for *How to Fish*. It replaces the held knife mesh with a configurable karambit without changing item damage, networking, animations, or save data.
 
 ## Features
